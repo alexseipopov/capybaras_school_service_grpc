@@ -18,4 +18,5 @@ message GetSchoolResponse {
   int32 expires_in = 4;
   string school_user_id = 5;
   string coalition = 6;
+  string description = 7;
 }
