@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import school_service_pb2 as school__service__pb2
+import school_service.school_service_pb2 as school__service__pb2
 
 
 class SchoolServiceStub(object):
