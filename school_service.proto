@@ -15,6 +15,6 @@ message GetSchoolResponse {
   string access_token = 1;
   string refresh_token = 2;
   string session_state = 3;
-  string expires_in = 4;
+  int32 expires_in = 4;
   string school_user_id = 5;
 }

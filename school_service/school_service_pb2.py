@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x14school_service.proto\x12\x0eschool_service\"6\n\x10GetSchoolRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"\x83\x01\n\x11GetSchoolResponse\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\x12\x15\n\rsession_state\x18\x03 \x01(\t\x12\x12\n\nexpires_in\x18\x04 \x01(\t\x12\x16\n\x0eschool_user_id\x18\x05 \x01(\t2i\n\rSchoolService\x12X\n\x0fget_school_info\x12 .school_service.GetSchoolRequest\x1a!.school_service.GetSchoolResponse\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x14school_service.proto\x12\x0eschool_service\"6\n\x10GetSchoolRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"\x83\x01\n\x11GetSchoolResponse\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\x12\x15\n\rsession_state\x18\x03 \x01(\t\x12\x12\n\nexpires_in\x18\x04 \x01(\x05\x12\x16\n\x0eschool_user_id\x18\x05 \x01(\t2i\n\rSchoolService\x12X\n\x0fget_school_info\x12 .school_service.GetSchoolRequest\x1a!.school_service.GetSchoolResponse\"\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
