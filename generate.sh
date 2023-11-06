@@ -1,0 +1,1 @@
+python -m grpc_tools.protoc -I. --python_out=./school_service --grpc_python_out=./school_service school_service.proto

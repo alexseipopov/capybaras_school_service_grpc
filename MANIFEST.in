@@ -1,0 +1,2 @@
+include school_service_pb2.py
+include school_service_pb2_grpc.py

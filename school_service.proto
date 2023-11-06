@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package school_service;
+
+service SchoolService {
+  rpc get_school_info (GetSchoolRequest) returns (GetSchoolResponse) {}
+}
+
+message GetSchoolRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message GetSchoolResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+  string session_state = 3;
+  string expires_in = 4;
+  string school_user_id = 5;
+}
