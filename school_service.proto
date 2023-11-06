@@ -4,6 +4,7 @@ package school_service;
 
 service SchoolService {
   rpc get_school_info (GetSchoolRequest) returns (GetSchoolResponse) {}
+  rpc get_rp_info (GetRpRequest) returns (GetRpResponse) {}
 }
 
 message GetSchoolRequest {
@@ -19,4 +20,18 @@ message GetSchoolResponse {
   string school_user_id = 5;
   string coalition = 6;
   string description = 7;
+}
+
+message GetRpRequest {
+  string access_token = 1;
+}
+
+message GetRpResponse {
+  int32 crp = 1;
+  int32 coins = 2;
+  int32 prp = 3;
+  int32 level = 4;
+  string first_name = 5;
+  string last_name = 6;
+  string login = 7;
 }
