@@ -48,6 +48,6 @@ message Member {
 
 message GetAllMembersFromPlatformResponse {
   repeated Member members = 1;
-  string status = 2;
+  int32 status = 2;
   string description = 3;
 }
