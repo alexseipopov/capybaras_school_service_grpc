@@ -24,6 +24,11 @@ class SchoolServiceStub(object):
                 request_serializer=school__service__pb2.GetRpRequest.SerializeToString,
                 response_deserializer=school__service__pb2.GetRpResponse.FromString,
                 )
+        self.get_all_members_from_platform = channel.unary_unary(
+                '/school_service.SchoolService/get_all_members_from_platform',
+                request_serializer=school__service__pb2.GetAllMembersFromPlatformRequest.SerializeToString,
+                response_deserializer=school__service__pb2.GetAllMembersFromPlatformResponse.FromString,
+                )
 
 
 class SchoolServiceServicer(object):
@@ -41,6 +46,12 @@ class SchoolServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def get_all_members_from_platform(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_SchoolServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -53,6 +64,11 @@ def add_SchoolServiceServicer_to_server(servicer, server):
                     servicer.get_rp_info,
                     request_deserializer=school__service__pb2.GetRpRequest.FromString,
                     response_serializer=school__service__pb2.GetRpResponse.SerializeToString,
+            ),
+            'get_all_members_from_platform': grpc.unary_unary_rpc_method_handler(
+                    servicer.get_all_members_from_platform,
+                    request_deserializer=school__service__pb2.GetAllMembersFromPlatformRequest.FromString,
+                    response_serializer=school__service__pb2.GetAllMembersFromPlatformResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -95,5 +111,22 @@ class SchoolService(object):
         return grpc.experimental.unary_unary(request, target, '/school_service.SchoolService/get_rp_info',
             school__service__pb2.GetRpRequest.SerializeToString,
             school__service__pb2.GetRpResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def get_all_members_from_platform(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/school_service.SchoolService/get_all_members_from_platform',
+            school__service__pb2.GetAllMembersFromPlatformRequest.SerializeToString,
+            school__service__pb2.GetAllMembersFromPlatformResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
